@@ -2,7 +2,9 @@ from web3 import Web3, HTTPProvider
 from solc import compile_source
 from web3.contract import ConciseContract
 
-#HTTP of the host to send imforamtion
+
+#IP and port number of the node.
+#In this case the code and the node are both on the pi
 w3 = Web3(HTTPProvider('http://127.0.0.1:8042'))
 
 #ABI of the contract
