@@ -29,13 +29,16 @@ tDelay = 4
 #CODE FROM https://www.circuitbasics.com/raspberry-pi-ds18b20-temperature-sensor-tutorial/
 #slightly modified
 #==================================================
+
 #Goes to the the directory in which w1_slave exits
 #w1_slave contains raw data from the sensor
 base_dir = '/sys/bus/w1/devices/'
+
 #If multiple sensors are used the '28*' will have to be changed to accomidate that
 #The following functions read_temp_raw and read_temp could be added to a loop and each iteration
  #of the loop could be a different sensor
 device_folder = glob.glob(base_dir + '28*')[0]
+
 #Gets the data from w1_slave
 device_file = device_folder + '/w1_slave'
 
