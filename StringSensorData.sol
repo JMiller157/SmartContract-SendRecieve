@@ -1,12 +1,16 @@
 pragma solidity ^0.5.16;
 
+// contract name
 contract StringSensorData{
+         //Initilizes varibles used later within the code
          address owner;
          string sensorData;
 
         constructor() public
         {
-            sensorData = '0';
+            //Sets sensor data to an empty value
+            sensorData = '';
+           
             owner = msg.sender;
         }
 
